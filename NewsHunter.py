@@ -2,13 +2,14 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 import datetime
 from yahoo_earnings_calendar import YahooEarningsCalendar
+import pickle
 
 date_from = datetime.datetime.strptime(
-    'May 5 2000  10:00AM', '%b %d %Y %I:%M%p')
+    'Jan 29 2017  10:00AM', '%b %d %Y %I:%M%p')
 date_to = datetime.datetime.strptime(
-    'May 8 2019  1:00PM', '%b %d %Y %I:%M%p')
+    'Feb 16 2020  1:00PM', '%b %d %Y %I:%M%p')
 
-yec = YahooEarningsCalendar(0)
+yec = YahooEarningsCalendar()
 
 data = yec.earnings_between(date_from, date_to)
 #for new in data:
